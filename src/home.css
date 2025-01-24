@@ -1,0 +1,95 @@
+
+  /* User Details Container */
+  #userdetails {
+    text-align: center;
+    background: #ffffff; /* White card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  #userdetails h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0077cc; /* Primary blue for headings */
+  }
+  
+  /* Analyze Button */
+  button {
+    background: #0077cc; /* Blue button background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #005fa3; /* Darker blue on hover */
+  }
+  
+  #up {
+    margin-top: 20px;
+  }
+  
+  /* Popup Styling */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: #ffffff; /* White card for popup */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .close-button {
+    margin-top: 0px;
+    background: #ff5252; /* Red close button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .close-button:hover {
+    background: #e03e3e; /* Darker red on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    #userdetails h1 {
+      font-size: 1.2rem;
+    }
+  
+    button, .close-button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  
+    .popup-content {
+      padding: 1.5rem;
+    }
+  }
+  

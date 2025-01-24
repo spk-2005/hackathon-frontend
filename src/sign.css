@@ -1,0 +1,122 @@
+
+.register-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.register-form h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.register-form input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.register-form input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.google-btn {
+    background: #4285F4;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.google-btn:hover {
+    background: #357ae8;
+}
+
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-icon.google:hover {
+    color: #4285F4;
+}
+
+.social-icon.facebook:hover {
+    color: #3b5998;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: #007BFF;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    margin-left: 5px;
+}
+
+.toggle-btn:hover {
+    color: #0056b3;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #d9534f;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .register-container {
+        padding: 20px;
+    }
+
+    .google-btn {
+        font-size: 14px;
+    }
+
+    .social-icon {
+        font-size: 20px;
+    }
+}

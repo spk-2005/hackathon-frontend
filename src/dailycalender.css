@@ -1,0 +1,49 @@
+.daily-calendar {
+  font-family: Arial, sans-serif;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columns for each day of the week */
+  gap: 10px;
+}
+
+.calendar-day {
+  position: relative; /* Required for positioning the pseudo-element */
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Optional: Adds rounded corners to the calendar days */
+}
+
+.calendar-day::before {
+  content: ''; /* Creates an empty content block */
+  position: absolute; /* Position it relative to .calendar-day */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover; /* Ensures the background image covers the entire element */
+  background-position: center; /* Ensures the background image is centered */
+  opacity: 0.3; /* Adjust the opacity of the image (default set to 0.3, you can change it) */
+  border-radius: 5px; /* Ensures the background image follows the rounded corners */
+}
+
+.calendar-day.completed {
+  background-color: green; /* Use green for completed tasks */
+  color: white;
+}
+
+.calendar-day.completed::before {
+  background-image: url('check-mark .png'); /* Set the image for completed tasks */
+}
+
+.calendar-day.not-completed {
+  background-color: red; /* Use red for incomplete tasks */
+  color: white;
+}
+
+.calendar-day.not-completed::before {
+  background-image: url('cancel.png'); /* Set the image for incomplete tasks */
+}

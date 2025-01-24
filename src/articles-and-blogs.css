@@ -1,0 +1,37 @@
+.articles-and-blogs {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .dropdown-container {
+    margin: 20px auto;
+  }
+  
+  .dropdown {
+    font-size: 1em;
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .card {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+  }
+  
+  .card h2 {
+    color: #007bff;
+  }
+  
+  .card p {
+    margin: 10px 0;
+    font-size: 1em;
+    line-height:1.5;
+}

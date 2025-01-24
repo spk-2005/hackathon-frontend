@@ -1,0 +1,185 @@
+
+#header-section {
+    background:linear-gradient(135deg,rgba(0, 195, 255, 0.224),rgba(0, 98, 255, 0.336));
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid grey;
+  }
+  
+  #header-section #header-cont {
+    padding: 0px 0px;
+  }
+  #logo{
+    width: 100%;
+    height: 100px;
+  }
+  #header-section #header-cont ol img {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+  
+  #header-section #header-cont ol {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  #header-section #header-cont ol > li {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap; 
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #header-section #header-cont ol li a {
+    white-space: nowrap; 
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #header-section #header-cont ol li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  #header-section #header-cont ol li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    background: linear-gradient(45deg, #434343, #777777);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 10;
+  }
+  
+  #header-section #header-cont ol li:hover > ul {
+    display: block;
+  }
+  
+  #header-section #header-cont ol li ul li {
+    padding: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #header-section #header-cont ol li ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  #mainicon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+  #mainicon span a{
+    color: inherit;
+    padding: .6em;
+  }
+  
+  #header-section #header-cont ol > li.active a {
+    background-color: #0800ff; 
+    color: rgb(255, 255, 255);
+  }
+  
+  #header-section #header-cont ol::-webkit-scrollbar{
+    background-color: transparent;
+  }
+  
+  
+  @media only screen and (max-width: 348px) {
+    
+  #mainicon img{
+    padding: 0;
+    margin: 0;
+    height: 40px;
+  }
+  
+  #header-section #header-cont ol li ul li a{
+    font-size: .75rem !important;
+    padding: 0;
+    margin: 0;
+    width: 50px;
+  }
+  }
+  @media only screen and (max-width: 768px) {
+    
+  #mainicon img{
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    height: 40px;
+  }
+    #header-section #header-cont ol {
+      overflow-x: auto; 
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.2) transparent; 
+      font-size: .8rem; 
+      border-radius: 5px;
+      z-index: 10;
+      margin: 0;
+      padding: 0;
+      height: 50px;
+      display: flex; 
+    }
+    #header-section #header-cont ol li ul {
+      z-index: 100; 
+      font-size: .7rem !important; /* Decreased font size */
+      position: fixed; 
+      top: 50px;
+      left: 50%; 
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    #mainicon img{
+      padding: 0;
+      margin: 0;
+      width: 70px;
+      height: 30px;
+    }
+    #mainicon #datetime{
+      font-size: .5rem;
+      white-space: nowrap;
+    }
+    #mainicon span a{
+      font-size: .6rem;
+    }
+    #header-section #header-cont ol li ul {
+      z-index: 100; 
+      font-size: .7rem !important; /* Decreased font size */
+      position: fixed; 
+      top: 50px;
+      left: 30%; 
+    }
+    #header-section #header-cont ol li a,
+    #header-section #header-cont ol li{
+      padding: .3em;
+    }
+    #header-section #header-cont ol {
+      z-index: 1000;
+      padding: 0px;
+      margin: 0;
+      overflow-x: auto; 
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0, 186, 248, 0.2) transparent; 
+      display: flex;
+      gap: 5px;
+      font-size: .8rem !important;
+    }
+  }

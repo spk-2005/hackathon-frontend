@@ -1,0 +1,86 @@
+#usergoal {
+    background: linear-gradient(to bottom right, #d9d9d9, #f2f2f2); /* Subtle neutral gradient */
+    color: #333; /* Dark text for readability */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #usergoal:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  #usergoal h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    color: #444;
+    letter-spacing: 1px;
+  }
+  
+  #usergoal h1::after {
+    content: '';
+    width: 40%;
+    height: 3px;
+    background-color: #444;
+    display: block;
+    margin: 8px auto 0;
+    transition: width 0.3s ease;
+  }
+  
+  #usergoal h1:hover::after {
+    width: 70%;
+  }
+  
+  #usergoal p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #555;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  #usergoal h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #555;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #usergoal {
+      padding: 20px;
+    }
+  
+    #usergoal h1 {
+      font-size: 1.6rem;
+    }
+  
+    #usergoal h2 {
+      font-size: 1.4rem;
+    }
+  
+    #usergoal p {
+      font-size: 0.9rem;
+    }
+  }
+  

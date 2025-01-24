@@ -1,0 +1,116 @@
+/* task.css */
+
+/* Base styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+#tasks-section {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+#tasks-section h1 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#tasks-section h3 {
+  font-size: 1.2rem;
+  color: #495057;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#tasks-section h2 {
+  font-size: 1.5rem;
+  color: #343a40;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Table styles */
+#tasks-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+#tasks-section thead {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+#tasks-section th,#tasks-section td {
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+}
+
+#tasks-section tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+#tasks-section tbody tr:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+/* Button styles */
+#tasks-section button {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #28a745;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#tasks-section button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+#tasks-section button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+#tasks-section button.completed {
+  background-color: #17a2b8;
+  color: #ffffff;
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  #tasks-section {
+    padding: 15px;
+  }
+
+  #tasks-section h1,#tasks-section h2,#tasks-section h3 {
+    font-size: 1.2rem;
+  }
+
+  #tasks-section th,#tasks-section td {
+    padding: 8px;
+    font-size: 0.85rem;
+  }
+
+  #tasks-section button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
