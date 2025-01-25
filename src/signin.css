@@ -641,7 +641,7 @@ select:focus {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .
+    
     .feature {
         width: 40px;
     }
