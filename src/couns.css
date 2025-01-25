@@ -1,0 +1,85 @@
+/* Counselling Container */
+.counselling-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Styling for the sections list */
+  .counselling-container .sections-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .counselling-container .sections-list li {
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .counselling-container .sections-list li.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  /* Styling for the sections */
+  .counselling-container .section {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .counselling-container #inpersonal-section {
+    display: block; /* By default, this section will show */
+  }
+  
+  /* Form styling */
+  .counselling-container  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .counselling-container form input[type="text"],
+  .counselling-container  form input[type="tel"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .counselling-container form label {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .counselling-container form input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  /* Video Call Container */
+  .video-call-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .video-container {
+    width: 48%;
+    text-align: center;
+  }
+  
+  .counselling-container video {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  

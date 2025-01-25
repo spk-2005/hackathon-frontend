@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import './signin.css';
 import logo from './swasthik.png';
-import ima from './istockphoto-922112426-1024x1024.jpg';
-import ima1 from './pexels-karolina-grabowska-4386466.jpg';
+import ima from './stock-photo-general-medical-services-gms-general-practitioners-gps-family-doctors-diagram.jpeg.jpg';
+import ima1 from './stock-photo-health-care-concept.jpeg.jpg';
 import Airtable from 'airtable'; 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import DailyCalendar from './dailycalender';
@@ -185,19 +185,6 @@ export default function Signin() {
   
     return (
         <>
-<div id="sr">
-    <a href="#suggestions">
-        <span class="suggestions-text">Give Suggestions</span>
-        <i class="fas fa-comment-dots suggestions-icon"></i>
-    </a>
-</div>
-<div id="sra">
-    <a href="#rating">
-        <span class="ratings-text">Rate Us</span>
-        <i class="fas fa-star rating-icon"></i>
-    </a>
-</div>
-
 
 
   
@@ -206,24 +193,30 @@ export default function Signin() {
                     <>
                         <div id='udet'>
                             <div id='udet1'>
+                                <div id='signp'>
                         <ol id='udeatils' style={{listStyleType:'none'}}>
                             <li>Signed in as: {name}</li>
                             <li>Your Credits: {credits} <i className='fas fa-gem diamond-animation' id='gem'></i></li>
 
 
-                        </ol>
-                        <button id='profile' onClick={handleProfileMenuToggle}>&#128100;</button>
+                        </ol></div>
+                        <button id='profile' onClick={handleProfileMenuToggle} style={{backgroundColor:'none'}}>&#128100;</button>
                         </div><div id='cal'>
-                            <Goal/>
+                            <div>
+                            <Goal/></div>
+                            <div>
                             <DailyCalendar/>
+                            </div>
                         </div></div>
                     </>
                 ) : (
+                    <><h1 class="animated-header">I am Your Personal Assistant</h1>
+
                     <ol id='cred' onClick={handleRegi}>
                         <li><button id='sig'>Sign In</button></li>
                         <li><button id='sig'>Sign Up</button></li>
                     </ol>
-                )}
+                    </>)}
 
                 {showpr && userEmail && (
                     <>
@@ -238,13 +231,13 @@ export default function Signin() {
                     </div>
                     </> )}
             </div>
-            <section style={{ textAlign: 'center', padding: '20px' }}>
+            <section id='imm' style={{ textAlign: 'center', padding: '20px' }}>
                 <div>
                     <img 
                         src={images[index]} 
                         alt="Description of the image" 
-                        style={{ width: '100%', maxHeight: '400px', objectFit: 'cover' }} 
-                    />
+                        style={{height:'400px',width:"100%"}}
+                           />
                 </div>
                 {userEmail ? (
                     <h1>Hi! {name}</h1>
@@ -259,7 +252,7 @@ export default function Signin() {
             </section>
             <section id="inno" class="inno-section">
   <div class="container">
-    <h2 class="section-title">Empowering Your Health Journey</h2>
+    <h2 class="section-title">What we will do</h2>
     <p class="section-description">
       Our platform revolutionizes personal health and wellness by providing tailored workout routines, diet plans, and wellness recommendations based on your unique profile. Powered by advanced AI, we deliver personalized insights, real-time progress tracking, and motivational feedback to keep you engaged and achieve remarkable results.
     </p>
@@ -279,11 +272,20 @@ export default function Signin() {
       <div class="feature">
         <h3>Wellness Recommendations</h3>
         <p>Receive expert tips and guidance to enhance your mental and physical well-being.</p>
-      </div>
+      </div><div class="feature">
+  <h3>Personal AI Bot Assistant</h3>
+  <p>Your very own AI-driven personal assistant to guide you through workouts, diet plans, and wellness practices. Stay connected, stay motivated, and achieve your health goals with ease.</p>
+</div>
+
+<div class="feature">
+  <h3>Monthly Streak Tracker</h3>
+  <p>Track your progress with our Monthly Streak feature. Stay consistent and motivated by setting and achieving goals each month. Celebrate your milestones as you progress on your wellness journey.</p>
+</div>
+
     </div>
   </div>
 </section>
-
+<div id='newsug'>
             <section id='suggestions' className="feedback-section">
                 <div className="feedback-container">
                     <h2>We Value Your Suggestions</h2>
@@ -291,7 +293,7 @@ export default function Signin() {
                     <form className="feedback-form" onSubmit={handleSuggestionSubmit}>
                         <label htmlFor="suggestion-textarea" className="feedback-label">Your Suggestions:</label>
                         <textarea id="suggestion-textarea" name="suggestions" required></textarea>
-                        <button type="submit" className="feedback-submit" style={{backgroundColor:' rgb(0, 140, 255)'}}>Submit</button>
+                        <button type="submit" className="feedback-submit" style={{backgroundColor:' rgb(0, 140, 255)',margin:'0'}}>Submit</button>
                     </form>
                 </div>
             </section>
@@ -317,6 +319,7 @@ export default function Signin() {
                     </form>
                 </div>
             </section>
+            </div>
         </>
     );
 }

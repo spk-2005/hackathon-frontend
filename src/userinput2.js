@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Userinput() {
+export default function Userinput2() {
     const storedEmail = sessionStorage.getItem('email');
     const storedName = sessionStorage.getItem('usname');
     const [age, setAge] = useState('');
@@ -65,7 +65,7 @@ export default function Userinput() {
         <div id='userinput-section'>
             <h2>User Input Form</h2>
             <form onSubmit={handleSubmit}>
-                <input type="number" placeholder="Enter Your Ag" value={age} onChange={(e) => setAge(e.target.value)} />
+                <input type="number" placeholder="Enter Your Age" value={age} onChange={(e) => setAge(e.target.value)} />
                 <input type="number" placeholder="Enter Your Height" value={height} onChange={(e) => setHeight(e.target.value)} />
                 <input type="number" placeholder="Enter Your Weight" value={weight} onChange={(e) => setWeight(e.target.value)} />
                 <label> Gender:

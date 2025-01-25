@@ -108,7 +108,6 @@ export default function Task() {
   }, [allCompleted,today]);
 
   const toggleActivityStatus = (index) => {
-    localStorage.setItem(index,'done');
     const activity = activities[index];
     setTaskToConfirm(activity);
     setIsModalOpen(true);
@@ -134,30 +133,16 @@ export default function Task() {
 
   const handleCancel = () => {
     setIsModalOpen(false);
-  };useEffect(() => {
-    if (allCompleted && !dayCompleted) {
-      console.log('All tasks completed. Preparing to update Airtable...');
-      localStorage.setItem('completionDate', today);
-      if (!sessionStorage.getItem('airtableUpdated')) {
-        markDayAsDoneInAirtable();
-      }
-    }
-  }, [allCompleted, dayCompleted, today]);
-  
+  };
+
   const markDayAsDoneInAirtable = async () => {
-    if (sessionStorage.getItem('airtableUpdated') === 'true') {
-      console.log('Airtable update already performed today.');
-      return;
-    }
-  
     try {
-      console.log('Sending data to Airtable...');
       const response = await fetch(
         `https://api.airtable.com/v0/appfQNmAs6vTN5iAn/dailytasks`,
         {
           method: 'POST',
           headers: {
-            Authorization: `Bearer YOUR_API_KEY`, // Replace with your actual API key
+            Authorization: `Bearer pataRZ3DHSFEkG4y5.990679aa58294bb7876ba2b2450d1c3b79ef7c49cf4754557f69d0e5e07e2061`,
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
@@ -170,22 +155,18 @@ export default function Task() {
           }),
         }
       );
-  
+
       if (response.ok) {
-        setMessage('All tasks are completed for the day! Data has been sent to Airtable.');
-        sessionStorage.setItem('airtableUpdated', 'true');
-        console.log('Data successfully sent to Airtable.');
+        setMessage(`All tasks are completed for the day! Data has been sent to Airtable.`);
+        console.log(`Day ${date} marked as done in Airtable for user ${userId}.`);
       } else {
-        const error = await response.json();
-        setMessage('Failed to update Airtable. Please try again later.');
-        console.error('Failed to update Airtable:', error);
+        console.error('Failed to update Airtable');
       }
     } catch (error) {
-      setMessage('Error occurred while updating Airtable. Please check your connection.');
       console.error('Error updating Airtable:', error);
     }
   };
-  
+
   return (
     <section id="tasks-section">
       <h1>Complete Your Tasks - {sessionStorage.getItem('usname')}</h1>
@@ -234,4 +215,4 @@ export default function Task() {
       />
     </section>
   );
-}
+}  

@@ -6,9 +6,12 @@ h1, h2 {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
+    background-color: #fbfdff;  
     position: relative;
+}
+#imm h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #b8c900;
 }
 #udet{
     width: 100%;
@@ -28,6 +31,13 @@ h1, h2 {
     justify-content: space-between;
     align-items: center;
 }
+#udeatils{
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+#signp{
+}
 #user-info {
     display: flex;
     flex-direction: column;
@@ -45,21 +55,19 @@ h1, h2 {
 }
 
 #profile {
-    background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
     color: #007bff;
+    background-color: none;
     transition: transform 0.3s ease;
 }
 
-#profile:hover {
-    transform: rotate(360deg);
-}
 
 #cred {
     display: flex;
     gap: 10px;
+    margin-left: auto;
 }
 
 .auth-btn {
@@ -79,12 +87,11 @@ h1, h2 {
 
 #profile-menu {
     position: absolute;
-    top: 60px;
-    right: 20px;
-    background: #ffffff;
+    top: 110px;
+    background-color: white;
+    right: 40px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 10px;
     width: 250px;
     z-index: 10;
     transform: translateY(-10px);
@@ -98,8 +105,8 @@ h1, h2 {
     color: #333;
     position: absolute;
     top: 10px;
+    margin: 1em;
     right: 10px;
-    background-color: transparent;
     border: none;
     padding: 5px;
     transition: all 0.3s ease;
@@ -163,10 +170,19 @@ h5#logout:hover {
     }
 }
 
-/* Media queries for responsive design */
+@media only screen and (max-width:750px){
+}
 @media (max-width: 1024px) {
+    #udet1{
+        font-size: .8rem;
+    }
     #userprofile {
         padding: 10px;
+    }
+    #cal{
+        display: flex;
+        flex-direction: column !important;
+
     }
 
     #profile-menu {
@@ -212,7 +228,28 @@ h5#logout:hover {
         font-size: 20px;
         margin-top: 10px;
     }
-
+    .feature h3{
+        font-size: .7rem !important;
+     }
+     .feature p{
+        font-size: .7rem !important;
+     }
+    .feature{
+        padding: .3em !important;
+        height: 200px;
+        font-size: .7rem !important;
+        width: 60% !important;
+    }
+    
+    #imm h1{
+        font-size: 1rem;
+        -webkit-text-stroke: none !important;
+    }
+    #sig{
+        margin: 0;
+        padding: .7em !important;
+    font-size: .6rem !important;
+}
     .auth-btn {
         width: 100%;
         padding: 15px;
@@ -230,6 +267,9 @@ h5#logout:hover {
 }
 
 @media (max-width: 480px) {
+    #userprofile h1{
+        font-size: 1rem;
+    }
     #userprofile {
         padding: 10px;
         font-size: 14px;
@@ -306,102 +346,98 @@ h5#logout:hover {
 #home-hero {
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #home-hero:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
 }
 
 #sign {
     color: #4CAF50; 
     cursor: pointer;
 }
-
 #inno {
-    padding: 40px;
-    margin: 20px auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f4f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .container {
     max-width: 1200px;
-    transition: transform 0.3s ease-in-out; 
-}
-
-#inno:hover {
-    transform: translateY(-5px); /* Slightly lift the section on hover */
-}
-
-#inno #inno-content {
-    margin-bottom: 1em;
-}
-
-#inno h1 {
-    font-size: 40px;
-    color: #2b7105;
-    font-weight: 700;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section-title {
     text-align: center;
-    animation: slideIn 1s ease-in-out; 
-}
-
-#inno #inno-content p {
-    margin-top: 1em;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards 0.3s;
+  }
+  
+  .section-description {
     text-align: center;
-    font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    animation: fadeInText 1.2s ease-in-out; 
-}
-
-#inno #inno-focus ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    animation: fadeIn 1.5s ease-in-out; 
-}
-
-#inno #inno-focus ul li {
-    padding: 20px;
-    background-color: #f9f9f9;
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards 0.6s;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards 1s;
+  }
+  
+  .feature {
+    background-color: #1787ff3b;
+    padding: 30px;
     border-radius: 8px;
-    transition: transform 0.3s ease, background-color 0.3s ease; 
-    font-size: 18px;
-    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-#inno #inno-focus ul li:hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.5;
+  }
+  
+  .feature:hover {
     transform: translateY(-10px);
-}
-
-#inno-help h1 {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #2b7105;
-    animation: slideIn 1s ease-in-out; 
-}
-
-#inno-help ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-#inno-help ul li {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    text-align: center;
-}
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
 /* Define the perspective for 3D effect */
 ol {
     perspective: 800px; /* Adjust for a more 3D effect */
@@ -467,18 +503,15 @@ ol {
     text-transform: uppercase; 
     text-decoration: none; 
     transition: transform 0.2s ease, background 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
 #sig:hover {
     transform: translateY(-3px); 
     background: linear-gradient(135deg, #1b86f883, #00b7ff81); 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
 }
 
 #sig:active {
     transform: translateY(1px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -518,62 +551,121 @@ ol {
     --text-color: #333;
     --bg-color: #f9f9f9;
 }
-
 .feedback-section {
-    padding: 40px;
-    background-color: var(--bg-color);
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 600px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid var(--green-primary);
-    width: 90%; /* Ensure it takes 90% of the width on smaller screens */
+    margin: 2em;
+    border-radius: 20px;
+    height: 600px;
+    width: 50%;
+    box-shadow: 0px 8px 16px grey;
+    border-bottom: 2px solid #e0e0e0;
 }
 
 .feedback-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
+/* Header styles */
 .feedback-container h2 {
-    font-size: 28px;
-    color: var(--green-dark);
+    font-size: 2.5rem;
+    color: #00b0f0; /* Light blue color for heading */
     margin-bottom: 15px;
 }
 
 .feedback-container p {
-    font-size: 16px;
-    color: var(--text-color);
-    margin-bottom: 25px;
+    font-size: 1.2rem;
+    color: #333333;
+    margin-bottom: 30px;
 }
 
+/* Form styling */
 .feedback-form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
     align-items: center;
 }
 
+/* Labels */
 .feedback-label {
-    font-size: 14px;
-    color: var(--text-color);
-    margin-bottom: 10px;
-}
-
-.feedback-input {
+    font-size: 1.1rem;
+    color: #333333;
+    text-align: left;
     width: 100%;
-    max-width: 500px;
-    padding: 12px;
-    border: 2px solid var(--green-light);
-    border-radius: 5px;
-    font-size: 14px;
-    margin-bottom: 20px;
-    transition: border-color 0.3s;
 }
 
-.feedback-input:focus {
-    border-color: var(--green-primary);
-    outline: none;
-    box-shadow: 0 0 5px rgba(76, 129, 175, 0.4);
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    transition: border-color 0.3s ease;
 }
+
+textarea:focus {
+    border-color: #00b0f0; /* Light blue border when focused */
+    outline: none;
+}
+
+/* Select Input */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7faff;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #00b0f0; /* Light blue border when focused */
+    outline: none;
+}
+
+
+.feedback-submit:hover {
+    background-color: rgb(0, 120, 220); /* Slightly darker blue on hover */
+    transform: scale(1.05);
+}
+
+.feedback-submit:active {
+    transform: scale(1); /* Reset scale when clicked */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .
+    .feature {
+        width: 40px;
+    }
+    .feedback-container {
+        width: 100%;
+    }
+
+    .feedback-container h2 {
+        font-size: 2rem;
+    }
+
+    .feedback-form {
+        width: 100%;
+    }
+
+    .feedback-submit {
+        width: 100%;
+    }
+    #
+    .section-title {
+        font-size: 1rem !important;
+    }
+}
+
 
 .submit-btn {
     background-color: var(--green-primary);
@@ -590,21 +682,18 @@ ol {
     background-color: var(--green-dark);
 }
 
-.feedback-section textarea {
-    resize: none;
-}
-
-.feedback-container select {
-    padding: 10px;
-    border: 2px solid var(--green-light);
-    border-radius: 5px;
-}
 
 @media (max-width: 768px) {
+    #newsug{
+        flex-direction: column !important;
+    }
     .feedback-section {
         padding: 20px;
         margin: 10px auto;
-        max-width: 95%;
+        width: 100%;
+        box-shadow: none;
+        border-radius: none;
+        border-bottom: 2px solid grey;
     }
 
     .feedback-container h2 {
@@ -621,9 +710,17 @@ ol {
         font-size: 14px; /* Keep font size readable */
     }
 
+    #rating button,
+    .feedback-submit ,
+    #feedback-section button {
+        width: max-content !important;
+    }
     .submit-btn {
         padding: 10px 20px; /* Adjust button padding */
         font-size: 14px; /* Slightly smaller font size for buttons */
+    }
+    #rating{
+        height: 300px;
     }
 }
     
@@ -673,7 +770,6 @@ ol {
     padding: 10px;
     background-color: #e0f2f7; /* Light green background */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #sr {
@@ -684,7 +780,16 @@ ol {
     right: 0; /* Place "Rate Us" on the right */
     writing-mode: vertical-rl; /* "Rate Us" faces left */
 }
-
+#newsug{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.suggestions{
+    width: 50%;
+}
 .suggestions-text, .ratings-text {
     font-size: 18px;
     margin-bottom: 10px;
@@ -717,7 +822,6 @@ ol {
 
     #sr, #sra {
         padding: 8px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -752,4 +856,42 @@ ol {
     #sr:hover, #sra:hover {
         transform: scale(1.02); /* Slightly reduce hover scale for small screens */
     }
+}
+
+
+/* Header styles */
+.animated-header {
+    font-size: 3rem; /* Large text size */
+    color: #00b0f0; /* Light blue color */
+    text-align: center;
+    margin-top: 0vh; /* Center vertically */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-50px); /* Start off-screen */
+    animation: slideIn 1.5s ease-out forwards, fadeIn 2s ease-out forwards; /* Add animations */
+}
+
+/* Animation for sliding in */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50px); /* Start from above */
+    }
+    100% {
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start fully transparent */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+/* Adding a transition effect to make color change smooth */
+.animated-header:hover {
+    color: #00a1c9; /* Darker shade of blue for hover effect */
+    transition: color 0.3s ease; /* Smooth color transition */
 }

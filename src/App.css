@@ -1,13 +1,17 @@
-
-/* Top navigation button */
+body{
+}
 #top {
   position: fixed;
   bottom: 0px;
-  left: 20px;
+  right: 20px;
   cursor: pointer;
   z-index: 1001;
   padding: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
+}
+#main{
+  overflow: hidden;
+  font-family: Georgia, 'Times New Roman', Times, serif !; 
 }
 
 #top img {
@@ -32,3 +36,20 @@
   height: 60px;
   animation: jump 1s infinite alternate ease-in-out;
 }  
+@media only screen and (max-width:500px){
+  
+#top{
+  right: 20px;
+}
+#top img {
+  width:50px;
+  height:50px;
+}
+#chatbot-icon {
+  left: 10px !important; 
+}
+#chatbot-icon img{
+  width:50px !important;
+  height:50px  !important;
+}
+}

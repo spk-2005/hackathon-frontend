@@ -75,7 +75,30 @@ const Diet = () => {
         Saturday: ["Chia seed pudding", "Grilled chicken with salad", "Roasted salmon with asparagus"],
         Sunday: ["Vegetable smoothie", "Grilled turkey with quinoa", "Roasted vegetables with chicken breast"],
       },
+    },cancer: {
+      eat: [
+        "Cruciferous vegetables (broccoli, cauliflower)",
+        "Antioxidant-rich fruits (blueberries, cherries)",
+        "Whole grains (quinoa, oats)",
+        "Lean proteins (fish, legumes)",
+        "Healthy fats (olive oil, nuts)",
+      ],
+      avoid: [
+        "Processed meats (bacon, sausage)",
+        "Sugary foods and drinks",
+        "Refined grains (white bread, pasta)",
+      ],
+      schedule: {
+        Monday: ["Oatmeal with blueberries", "Grilled salmon with spinach", "Steamed broccoli with brown rice"],
+        Tuesday: ["Avocado toast", "Vegetable soup with lentils", "Baked chicken with sweet potatoes"],
+        Wednesday: ["Smoothie with spinach and cherries", "Quinoa salad with beans", "Baked fish with green beans"],
+        Thursday: ["Greek yogurt with nuts", "Roasted vegetable wrap", "Grilled turkey with quinoa"],
+        Friday: ["Whole grain toast with avocado", "Salmon salad", "Vegetable stir-fry with tofu"],
+        Saturday: ["Chia seed pudding", "Grilled chicken salad", "Baked salmon with asparagus"],
+        Sunday: ["Spinach smoothie", "Vegetable soup", "Baked tilapia with roasted vegetables"],
+      },
     },
+  
     heartDisease: {
       eat: [
         "Omega-3 fatty acids (salmon, flaxseeds)",
@@ -100,8 +123,123 @@ const Diet = () => {
         Sunday: ["Avocado toast", "Roasted sweet potatoes with turkey", "Vegetable stir-fry with tofu"],
       },
     },
-    // Include similar full weekly schedules for other diseases like cancer, cholesterol, asthma, arthritis, depression, kidneyDisease...
+    cholesterol: {
+      eat: [
+        "Oats and whole grains",
+        "Nuts and seeds (walnuts, chia seeds)",
+        "Fatty fish (salmon, mackerel)",
+        "Fruits (apples, citrus)",
+        "Vegetables (spinach, carrots)",
+      ],
+      avoid: [
+        "Trans fats (fried foods, margarine)",
+        "High-saturated fat foods (butter, cheese)",
+        "Processed snacks (chips, cookies)",
+      ],
+      schedule: {
+        Monday: ["Oatmeal with walnuts", "Grilled salmon with spinach", "Steamed carrots with brown rice"],
+        Tuesday: ["Smoothie with chia seeds", "Vegetable stir-fry with tofu", "Baked chicken with sweet potatoes"],
+        Wednesday: ["Greek yogurt with apples", "Quinoa salad", "Grilled fish with green beans"],
+        Thursday: ["Avocado toast", "Vegetable soup with lentils", "Roasted vegetables with salmon"],
+        Friday: ["Chia pudding", "Turkey wrap with veggies", "Vegetable stir-fry with quinoa"],
+        Saturday: ["Spinach smoothie", "Grilled chicken salad", "Baked tilapia with roasted vegetables"],
+        Sunday: ["Whole grain toast with almond butter", "Vegetable soup", "Grilled salmon with steamed broccoli"],
+      },
+    },
+    asthma: {
+      eat: [
+        "Vitamin C-rich foods (oranges, strawberries)",
+        "Leafy greens (spinach, kale)",
+        "Omega-3-rich fish (salmon, tuna)",
+        "Ginger and turmeric",
+        "Magnesium-rich foods (avocado, almonds)",
+      ],
+      avoid: [
+        "Dairy products (milk, cheese)",
+        "Preservative-rich processed foods",
+        "Fried and oily foods",
+      ],
+      schedule: {
+        Monday: ["Oatmeal with strawberries", "Grilled salmon with greens", "Steamed broccoli with brown rice"],
+        Tuesday: ["Spinach smoothie", "Vegetable soup", "Baked fish with asparagus"],
+        Wednesday: ["Avocado toast", "Lentil salad", "Chicken stir-fry with quinoa"],
+        Thursday: ["Greek yogurt with nuts", "Quinoa and spinach salad", "Baked chicken with kale"],
+        Friday: ["Chia seed pudding", "Vegetable wrap", "Baked salmon with vegetables"],
+        Saturday: ["Smoothie with oranges", "Grilled chicken salad", "Vegetable stir-fry with tofu"],
+        Sunday: ["Spinach omelette", "Roasted vegetables with quinoa", "Baked fish with kale"],
+      },
+    },
+    arthritis: {
+      eat: [
+        "Omega-3 fatty acids (salmon, chia seeds)",
+        "Anti-inflammatory spices (turmeric, ginger)",
+        "Leafy greens (spinach, kale)",
+        "Fruits (berries, oranges)",
+        "Whole grains (brown rice, quinoa)",
+      ],
+      avoid: [
+        "Refined sugars (sweets, pastries)",
+        "Fried and processed foods",
+        "Dairy and high-fat foods",
+      ],
+      schedule: {
+        Monday: ["Oatmeal with chia seeds", "Grilled salmon with greens", "Steamed broccoli with brown rice"],
+        Tuesday: ["Spinach smoothie", "Lentil soup", "Baked fish with asparagus"],
+        Wednesday: ["Avocado toast", "Vegetable quinoa salad", "Chicken stir-fry with kale"],
+        Thursday: ["Greek yogurt with nuts", "Roasted vegetables", "Grilled turkey with spinach"],
+        Friday: ["Smoothie with berries", "Quinoa salad", "Baked salmon with broccoli"],
+        Saturday: ["Spinach omelette", "Vegetable stir-fry", "Roasted sweet potatoes with chicken"],
+        Sunday: ["Chia seed pudding", "Grilled chicken with kale", "Baked fish with green beans"],
+      },
+    },
+    depression: {
+      eat: [
+        "Omega-3-rich fish (salmon, mackerel)",
+        "Whole grains (oats, brown rice)",
+        "Leafy greens (spinach, kale)",
+        "Dark chocolate (in moderation)",
+        "Berries and bananas",
+      ],
+      avoid: [
+        "Sugary snacks",
+        "Processed foods",
+        "Excess caffeine",
+      ],
+      schedule: {
+        Monday: ["Oatmeal with bananas", "Grilled chicken with spinach", "Vegetable stir-fry with quinoa"],
+        Tuesday: ["Smoothie with berries", "Lentil soup", "Baked salmon with broccoli"],
+        Wednesday: ["Greek yogurt with nuts", "Vegetable quinoa salad", "Chicken stir-fry"],
+        Thursday: ["Avocado toast", "Grilled turkey sandwich", "Roasted vegetables with salmon"],
+        Friday: ["Dark chocolate smoothie", "Quinoa salad", "Baked tilapia with greens"],
+        Saturday: ["Spinach omelette", "Vegetable soup", "Baked chicken with sweet potatoes"],
+        Sunday: ["Chia seed pudding", "Grilled salmon salad", "Roasted vegetables with quinoa"],
+      },
+    },
+    kidneyDisease: {
+      eat: [
+        "Low-potassium fruits (apples, berries)",
+        "Low-sodium vegetables (cabbage, zucchini)",
+        "Lean proteins (chicken, fish)",
+        "Unsalted nuts and seeds",
+        "White rice and pasta (in moderation)",
+      ],
+      avoid: [
+        "High-potassium foods (bananas, oranges)",
+        "High-sodium processed foods",
+        "Fried and fatty foods",
+      ],
+      schedule: {
+        Monday: ["Oatmeal with berries", "Grilled chicken with cabbage", "Steamed vegetables with rice"],
+        Tuesday: ["Apple slices with almond butter", "Vegetable soup with zucchini", "Baked fish with white rice"],
+        Wednesday: ["Greek yogurt", "Lentil salad with spinach", "Chicken stir-fry"],
+        Thursday: ["Smoothie with blueberries", "Quinoa salad", "Grilled salmon with greens"],
+        Friday: ["White rice with steamed cabbage", "Vegetable stir-fry", "Baked chicken"],
+        Saturday: ["Spinach omelette", "Grilled turkey salad", "Vegetable stir-fry with tofu"],
+        Sunday: ["Apple smoothie", "Roasted vegetables", "Baked fish with white rice"],
+      },
+    },
   };
+
 
   return (
     <div className="App">

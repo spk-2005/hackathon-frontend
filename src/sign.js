@@ -164,7 +164,7 @@ export default function Sign() {
                 </div>
             </div>
 
-            <p>
+            <p id='tog'>
                 {isSigningUp ? 'Already have an account?' : 'Don’t have an account?'}
                 <button className="toggle-btn" onClick={toggleSignUp}>
                     {isSigningUp ? 'Sign In' : 'Sign Up'}

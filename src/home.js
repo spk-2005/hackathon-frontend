@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Signin from './signin';
 import './home.css';
 import Userinput from './userinput';
+import Userinput2 from './userinput2';
 
 export default function Home() {
   const [showUserInput, setShowUserInput] = useState(false);

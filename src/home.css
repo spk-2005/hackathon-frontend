@@ -2,7 +2,7 @@
   /* User Details Container */
   #userdetails {
     text-align: center;
-    background: #ffffff; /* White card background */
+    color: black;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2rem;
@@ -18,10 +18,12 @@
   }
   
   /* Analyze Button */
-  button {
-    background: #0077cc; /* Blue button background */
-    color: #fff; /* White text */
+  #userdetails button {
+    background: #ffea00; /* Blue button background */
+    color: rgb(0, 0, 0);
+    border: 1px solid grey !important;
     border: none;
+    font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1rem;
@@ -29,8 +31,16 @@
     transition: background 0.3s ease;
   }
   
-  button:hover {
-    background: #005fa3; /* Darker blue on hover */
+  #userdetails button:hover {
+    background: #ffea0092; /* Darker blue on hover */
+  }
+  #userdetails button:focus, .close-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 119, 204, 0.5); /* Light blue focus ring */
+  }
+  
+  #userdetails button:hover, .close-button:hover {
+    transform: scale(1.05); /* Slight scaling on hover */
   }
   
   #up {
@@ -83,11 +93,13 @@
       font-size: 1.2rem;
     }
   
-    button, .close-button {
+    #userdetails button, .close-button {
       font-size: 0.9rem;
       padding: 8px 16px;
     }
-  
+  .popup-content{
+    overflow-y: scroll;
+  }
     .popup-content {
       padding: 1.5rem;
     }

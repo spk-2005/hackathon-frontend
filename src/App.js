@@ -10,7 +10,6 @@ import Userinput from './userinput';
 import DailyCalendar from './dailycalender';
 import Task from './task';
 import About from './about';
-import Chatbot from './chatbot';
 import { useState } from 'react';
 import Diet from './diet';
 import Community from './community';
@@ -18,9 +17,15 @@ import Book from './book';
 import ArticlesAndBlogs from './articles-and-blogs';
 import HealthChallenges from './health-challenges';
 import Leaderboard from './leaderboard';
+import ContactPage from './contact';
+import Contact from './contact';
+import Dashboard from './dashboard';
+import Mentalhealth from './mentalhealth';
+import Couns from './couns';
+import Resouce from './resouce';
+import Selfasses from './selfasses';
 
 function App() {
-  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -29,13 +34,10 @@ function App() {
     });
   };
 
-  const toggleChatbot = () => {
-    setIsChatbotOpen(prevState => !prevState);
-  };
 
   return (
     <>
-      <section>
+      <section id='main'>
         <Header />
         <BrowserRouter>
           <Routes>
@@ -47,7 +49,13 @@ function App() {
             <Route path="/task/:date" element={<Task />} /> 
             <Route path="/about" element={<About />} /> 
             <Route path="/diet" element={<Diet />} /> 
+            <Route path="/mentalhealth" element={<Mentalhealth/>} /> 
+            <Route path="/dashboard" element={<Dashboard />} /> 
             <Route path="/community" element={<Community />} /> 
+            <Route path="/contact" element={<Contact />} /> 
+            <Route path="/couns" element={<Couns/>} /> 
+            <Route path="/resouce" element={<Resouce/>} />
+            <Route path="/selfasses" element={<Selfasses/>} /> 
             <Route path="/book" element={<Book />} />
         <Route path="/articles-and-blogs" element={<ArticlesAndBlogs />} />
         <Route path="/health-challenges" element={<HealthChallenges />} />
@@ -64,21 +72,6 @@ function App() {
       </div>
       
 
-      {isChatbotOpen && (
-        <div 
-          id="chatbot" 
-          style={{ 
-            width: '300px',  
-            transition: 'width 0.3s, height 0.3s', 
-            position: 'fixed', 
-            bottom: '10px', 
-            right: '10px', 
-            zIndex: '1000',
-          }}
-        >
-          <Chatbot />
-        </div>
-      )}
     </>
   );
 }

@@ -1,79 +1,141 @@
+/* General Styles */
+#userinput-section {
+  background-color: #e0f7fa; /* Soft teal background */
+  padding: 40px 25px;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Helvetica', sans-serif;
+  transition: all 0.3s ease;
+  animation: slideIn 1s ease-out;
+}
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
   }
-  
-  
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#userinput-section h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #00796b; /* Deep teal for headings */
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+  padding: 14px 18px;
+  font-size: 1.1rem;
+  border: 2px solid #00796b;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+  border-color: #004d40; /* Darker shade for focus */
+  box-shadow: 0 0 6px rgba(0, 150, 136, 0.3);
+  transform: scale(1.02);
+}
+
+input[type="text"], input[type="number"] {
+  background-color: #ffffff;
+}
+
+select {
+  background-color: #b2dfdb; /* Lighter teal */
+  color: #004d40; /* Darker text for contrast */
+}
+
+button {
+  background-color: #004d40; /* Dark teal button */
+  color: #fff;
+  padding: 14px 22px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 77, 64, 0.2);
+}
+
+button:hover {
+  background-color: #00796b; /* Lighter shade on hover */
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #004d40;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #00796b;
+  font-weight: bold;
+  margin-top: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #004d40;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+label:hover {
+  color: #00796b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   #userinput-section {
-    max-width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll !important;
+    padding: 20px 15px;
+    max-width: 100%;
   }
-  
+
   #userinput-section h2 {
-    margin-bottom: 20px;
-    text-align: center;
+    font-size: 2rem;
   }
-  
-  /* Form Styles */
-  
-  form {
-    display: flex;
-    flex-direction: column;
+
+  input[type="number"],
+  input[type="text"],
+  select {
+    font-size: 1rem;
   }
-  
-  #userinput-section  input[type="text"],
-  #userinput-section  input[type="email"],
-  #userinput-section  input[type="number"] {
-    width: 100%;
-    height: 30px;
-    margin-bottom: 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
+
+  button {
+    font-size: 1rem;
   }
-  
-  #userinput-section  select {
-    width: 100%;
-    height: 30px;
-    margin-bottom: 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  #userinput-section   button[type="submit"] {
-    width: 100%;
-    height: 40px;
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #userinput-section  button[type="submit"]:hover {
-    background-color: #3e8e41;
-  }
-  
-  /* Error Message Styles */
-  
-  #userinput-section   #error-message {
-    color: #f00;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
-  /* Success Message Styles */
-  
-  #success-message {
-    color: #0f0;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
+}
+

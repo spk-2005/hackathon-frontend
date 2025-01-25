@@ -1,4 +1,3 @@
-
 .register-container {
     margin-left: auto;
     margin-right: auto;
@@ -109,14 +108,38 @@
 /* Responsive Design */
 @media (max-width: 480px) {
     .register-container {
-        padding: 20px;
+        padding: 10px;
     }
 
     .google-btn {
-        font-size: 14px;
+        font-size: 10px;
+        padding: 5px;
+        width: max-content;
+    }
+
+    .social-login h4 {
+        font-size: 10px;
+    }
+
+    .social-icons {
+        gap: 10px;
     }
 
     .social-icon {
+        font-size: 20px;
+    }
+
+    .toggle-btn {
+        font-size: 10px;
+    }#tog{
+        font-size: .7rem;
+    }
+
+    .register-form input {
+        font-size: 12px;
+    }
+
+    .register-form h2 {
         font-size: 20px;
     }
 }
